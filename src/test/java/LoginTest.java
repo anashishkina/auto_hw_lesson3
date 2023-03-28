@@ -12,11 +12,12 @@ public class LoginTest {
 
     @BeforeAll
     static void setBrowserSize(){
+        Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = true;
     }
     @Test
-    void TestLoginForm(){
+    void testLoginForm(){
 
         open("https://demoqa.com/automation-practice-form");
         executeJavaScript("$('#fixedban').remove()");
